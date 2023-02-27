@@ -230,6 +230,4 @@ package Loop;
 //     if(i==n){
 //         System.out.println("this is prime number");
 //     }
-
-//     }
 // }
