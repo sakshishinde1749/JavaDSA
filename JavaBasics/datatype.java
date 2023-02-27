@@ -28,6 +28,7 @@ public class datatype{
                     System.out.println(n);
 
                     System.out.println("akash");
+                    System.out.println("sakshi");
                 }
             }
 
