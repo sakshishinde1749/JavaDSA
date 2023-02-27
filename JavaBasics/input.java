@@ -20,12 +20,16 @@ import java.util.Scanner;
 //        Scanner sc=new Scanner(System.in);
 //        String name=sc.next();
 //        System.out.println(name);  
+
 //        String sen=sc.nextLine();
 //        System.out.println(sen);
+
 //        int a=sc.nextInt();
 //        System.out.println(a);
+
 //        boolean var=sc.hasNextInt();
 //        System.out.println(var);
+
 //          float b=sc.nextFloat();
 //          System.out.println(b);
 //     }

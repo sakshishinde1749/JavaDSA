@@ -27,7 +27,7 @@ public class datatype{
                     short n=120;     //similar to int and flaot contains decimal no.
                     System.out.println(n);
 
-                    System.out.println("sakshi");
+                    System.out.println("");
 
                 }
             }
