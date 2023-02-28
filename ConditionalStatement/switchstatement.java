@@ -31,7 +31,6 @@ public class switchstatement{
         }
 
     
-
 //calculator using switch 
             System.out.println("enter num1");
             int num1 = sc.nextInt();

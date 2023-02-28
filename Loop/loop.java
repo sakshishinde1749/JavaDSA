@@ -9,7 +9,7 @@ package Loop;
 import java.util.Scanner;
 public class loop{
     public static void main(String args[]){
-       try(Scanner sc = new Scanner(System.in));
+       Scanner sc = new Scanner(System.in);
 
         int counter = 0;
 
@@ -21,7 +21,7 @@ public class loop{
 
 
 
-//printing from 1 to 10
+        //printing from 1 to 10
         int n = 1;
         while(n<=10){
             System.out.println(n);
@@ -30,7 +30,7 @@ public class loop{
 
 
 
-//printing numbers from 1 to n (taking input n from user)
+        //printing numbers from 1 to n (taking input n from user)
         int counterr = 1;
 
         System.out.println("enter a last number");
@@ -44,7 +44,7 @@ public class loop{
 
 
 
-//sum of natural numbers
+        //sum of natural numbers
         int num = 1;
 
         System.out.println("enter a last number");
@@ -62,7 +62,7 @@ public class loop{
 
 
 
-//printing ... statement 10 times
+        //printing ... statement 10 times
         for(int i=1; i<=10; i++){
             System.out.println("I am not short");
         }
@@ -70,14 +70,14 @@ public class loop{
     
 
 
-//printing square pattern 
+        //printing square pattern 
         for(int i=1; i<=4; i++){
             System.out.println("* * * *");
         }
 
 
 
-//printing reverse of a number
+        //printing reverse of a number
         System.out.println("enter a number");
         int number = sc.nextInt();
 
@@ -91,7 +91,7 @@ public class loop{
 
 
 
-//reverse the given number
+        //reverse the given number
         System.out.println("enter a number");
         int numberr = sc.nextInt();
         int rev = 0;
@@ -108,7 +108,7 @@ public class loop{
         System.out.println(rev);
 
 
-//printing ... by do while loop
+        //printing ... by do while loop
         int countingNum = 0;
         do{
             System.out.println("life sucks:(");
@@ -117,7 +117,7 @@ public class loop{
 
 
 
-//using break statement
+        //using break statement
         System.out.println("Enter a number");
 
 
@@ -132,34 +132,34 @@ public class loop{
 
 
 
-//using continue statement
+        //using continue statement
         do{
             System.out.println("enter a number");
             int b = sc.nextInt();
             if(b%10==0){
                 continue;
             }
+            if(b>20){
+                break;
+            }
             System.out.println("Yes you can");
-        }while(true);
+        } while(true);
 
-
-
-//prime or not
+        //prime or not
         System.out.print("enter a number");
         int c = sc.nextInt();
 
         int i = 2;
 
-    for( i=2; i<c; i++){
+        for( i=2; i<c; i++){
             if(c%i==0){
 
                 System.out.println("number is not prime");
                 break;
             }
+        }
+        if(i==c){   
+            System.out.println("this is prime number");
+        }
     }
-    if(i==c){
-        System.out.println("this is prime number");
-    }
-}
-
 }
