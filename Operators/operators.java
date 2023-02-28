@@ -1,4 +1,5 @@
 package Operators;
+
 /*operators : 1.arithematic(binary/unary)      parathesis means "()"
 *             2.relational
 *             3.logical
@@ -17,12 +18,12 @@ package Operators;
 public class operators{
     public static void main(String args[]){
         int a=10;
-        int b=a++;                 //firstly value of 'a' will get assigned to 'b' then incremented
+        int b=a++;                 //firstly value of 'a' will get assigned to 'b' then incremented (post increment)
         System.out.println(a);
         System.out.println(b);
 
         int c=10;
-        int d=++c;                 //firstly value of 'c' will get incremented then it gets assigned to 'd'
+        int d=++c;                 //firstly value of 'c' will get incremented then it gets assigned to 'd' (pre increment)
         System.out.println(c);
         System.out.println(d);
 
