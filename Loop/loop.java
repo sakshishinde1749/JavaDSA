@@ -6,228 +6,160 @@ package Loop;
  */
 
 
+import java.util.Scanner;
+public class loop{
+    public static void main(String args[]){
+       try(Scanner sc = new Scanner(System.in));
 
-// public class loop{
-//     public static void main(String args[]){
-//         int counter = 0;
+        int counter = 0;
 
-//         while(counter<100){
-//             System.out.println("Dont waste your time");
-//             counter++;
-//         }
-//         System.out.println("printed 100x");
-//     }
-// }
-
-
-
-//PRINTING NUMBERS FROM 1 TO 10
-// public class loop{
-//     public static void main(String args[]){
-
-//         int n = 1;
-//         while(n<=10){
-//             System.out.println(n);
-//             n++;
-//         }
-
-//     }
-// }
+        while(counter<100){
+            System.out.println("Dont waste your time");
+            counter++;
+        }
+        System.out.println("printed 100x");
 
 
 
-//PRINTING NUMBERS FROM 1 TO n (TAKING n FROM USER)
-// import java.util.Scanner;
-// public class loop{
-//     public static void main(String args[]){
-//         Scanner sc = new Scanner(System.in);
-
-//         int counter = 1;
-
-//         System.out.println("enter a last number");
-//         int range = sc.nextInt();
-
-//         while(counter<=range){
-//             System.out.println(counter);
-//             counter++;
-//         }
-//         System.out.println("numbers are printed till "+ range);
-//     }
-// }
+//printing from 1 to 10
+        int n = 1;
+        while(n<=10){
+            System.out.println(n);
+            n++;
+        }
 
 
 
-//PRINTING SUM OOF n NATURAL NUMBERS
-// import java.util.Scanner;
-// public class loop{
-//     public static void main(String args[]){
-//         Scanner sc = new Scanner(System.in);
+//printing numbers from 1 to n (taking input n from user)
+        int counterr = 1;
 
-//         int counter = 1;
+        System.out.println("enter a last number");
+        int range = sc.nextInt();
 
-//         System.out.println("enter a last number");
-//         int range = sc.nextInt();
+        while(counter<=range){
+            System.out.println(counterr);
+            counterr++;
+        }
+        System.out.println("numbers are printed till "+ range);
 
-//         System.out.print("the sum of"+range+"natural numbers is ");
+
+
+//sum of natural numbers
+        int num = 1;
+
+        System.out.println("enter a last number");
+        int lastDigit = sc.nextInt();
+
+        System.out.print("the sum of"+lastDigit+"natural numbers is ");
     
-//         int sum = 0;
-//         while(counter<=range){
+        int sum = 0;
+        while(num<=lastDigit){
                         
-//             sum += counter;
-//             counter++;
-//         }
-//         System.out.println(sum);
-
-//     }
-// }
+            sum += num;
+            num++;
+        }
+        System.out.println(sum);
 
 
 
-//PRINTNING SOME STATEMENT 10 TIMES
-// public class loop{
-//     public static void main(String args[]){
-//         for(int i=1; i<=10; i++){
-//             System.out.println("I am not short");
-//         }
-//         System.out.println("we printed our statement 10 times");
-//     }
-// }
+//printing ... statement 10 times
+        for(int i=1; i<=10; i++){
+            System.out.println("I am not short");
+        }
+        System.out.println("we printed our statement 10 times");
+    
+
+
+//printing square pattern 
+        for(int i=1; i<=4; i++){
+            System.out.println("* * * *");
+        }
 
 
 
-//PRINTING SQUARE PATTERN
-// public class loop{
-//     public static void main(String args[]){
+//printing reverse of a number
+        System.out.println("enter a number");
+        int number = sc.nextInt();
 
-//         for(int i=1; i<=4; i++){
-//             System.out.println("* * * *");
-//         }
-//     }
-// }
+        while(number>0){
+            int lastdigit = number%10;
+            System.out.print(lastdigit);
 
-
-
-//PRINTING REVERSE OF NUMBER
-// import java.util.Scanner;
-// public class loop{
-//     public static void main(String args[]) {
-//         Scanner sc = new Scanner(System.in);
-
-//         System.out.println("enter a number");
-//         int n = sc.nextInt();
-
-//         for(int i=1; n>0; i++){
-//             int lastdigit = n%10;
-//             System.out.print(lastdigit);
-
-//             n = n/10;
+            number = number/10;
             
-//         }
-
-        
-//     }
-// }
+        }
 
 
 
-//REVERSE THE GIVEN NUMBER
-// import java.util.Scanner;
-// public class loop{
-//     public static void main(String args[]){
-//         Scanner sc = new Scanner(System.in);
+//reverse the given number
+        System.out.println("enter a number");
+        int numberr = sc.nextInt();
+        int rev = 0;
 
-//         System.out.println("enter a number");
-//         int n = sc.nextInt();
-//         int rev = 0;
+        while(numberr>0){
 
-//         for(int i=1; n>0; i++){
+            int lastdigit = numberr%10;
 
-//             int lastdigit = n%10;
+            rev = (rev*10) + lastdigit;
 
-//             rev = (rev*10) + lastdigit;
+            numberr = numberr/10;
 
-//             n = n/10;
-
-//         }
-//         System.out.println(rev);
-
-//     }
-// }
+        }
+        System.out.println(rev);
 
 
-//PRINTING SOMETHING BY DO WHILE LOOP
-// public class loop{
-//     public static void main(String args[]){
-//         int counter = 0;
-//         do{
-//             System.out.println("life sucks:(");
-//             counter++;
-//         }while(counter<=10);
-//     }
-// }
+//printing ... by do while loop
+        int countingNum = 0;
+        do{
+            System.out.println("life sucks:(");
+            countingNum++;
+        }while(countingNum<=10);
 
 
 
-//USING BREAK STATEMENT
-// import java.util.Scanner;
-// public class loop{
-//     public static void main(String args[]){
-//         Scanner sc = new Scanner(System.in);
-
-//         System.out.println("Enter a number");
+//using break statement
+        System.out.println("Enter a number");
 
 
-//         do{
-//             int n = sc.nextInt();
-//             if(n%10==0){
-//                 break;
-//             }
+        do{
+            int a = sc.nextInt();
+            if(a%10==0){
+                break;
+            }
 
-//             System.out.println("I cant give up now");
-//         }while(true);
-
-//     }
-// }
+            System.out.println(":)");
+        }while(true);
 
 
 
-//USING CONTINUE STATEMENT
-// import java.util.Scanner;
-// public class loop{
-//     public static void main(String args[]){
-//         Scanner sc = new Scanner(System.in);
-//         do{
-//             System.out.println("enter a number");
-//             int n = sc.nextInt();
-//             if(n%10==0){
-//                 continue;
-//             }
-//             System.out.println("stop caring for stupid people");
-//         }while(true);
-//     }
-// }
+//using continue statement
+        do{
+            System.out.println("enter a number");
+            int b = sc.nextInt();
+            if(b%10==0){
+                continue;
+            }
+            System.out.println("Yes you can");
+        }while(true);
 
 
 
-// NUM IS PRIMME OR NOT
-// import java.util.Scanner;
-// public class loop{
-//     public static void main(String args[]){
-//         Scanner sc = new Scanner(System.in);
+//prime or not
+        System.out.print("enter a number");
+        int c = sc.nextInt();
 
-//         System.out.println("enter a number");
-//         int n = sc.nextInt();
+        int i = 2;
 
-//         int i = 2;
+    for( i=2; i<c; i++){
+            if(c%i==0){
 
-//         for( i=2; i<n; i++){
-//             if(n%i==0){
+                System.out.println("number is not prime");
+                break;
+            }
+    }
+    if(i==c){
+        System.out.println("this is prime number");
+    }
+}
 
-//                 System.out.println("number is not prime");
-//                 break;
-//             }
-//     }
-//     if(i==n){
-//         System.out.println("this is prime number");
-//     }
-// }
+}

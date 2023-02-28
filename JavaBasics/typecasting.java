@@ -9,50 +9,53 @@
  */
 
 
-// public class typecasting{
-//     public static void main(String args[]){
-//         float a=56.98f;
-//         int b=(int)a;
-//         System.out.println(b);
-//         char ch='a';
-//         int n1=(int)ch;
-//         System.out.println(n1);
-
-//     }
-// }
-
-
-// import java.util.Scanner;
-// public class typecasting{
-//     public static void main (String args[]) {
-//         Scanner sc=new Scanner(System.in);
-//         // int a= (int)sc.nextFloat();
-//         // System.out.println(a);
-//         int b=(int)sc.next().charAt(2);
-//         System.out.println(b);
-
-        
-//     }
-// }
-
-
+ import java.util.*;
 public class typecasting{
     public static void main(String args[]){
-        // int a=2;
-        // char ch='a';
-        // System.out.println(ch-a);
-        // System.out.println(ch+a);
-        // int product=ch*a;
-        // System.out.println(product);
+        Scanner sc=new Scanner(System.in);
+
+        //typecasting concept
+
+        //float to int
+        float a=56.98f;
+        int   b=(int)a;
+        System.out.println(b);
 
 
-        // double a=2.4;
-        // long b=20943;
-        // double c=23.4f;
-        // double d=a+b+c;     //here value of a,b and c get converted to double value
-        // System.out.println(d);
+        //char to int
+        char ch='a';
+        int  n1=(int)ch;
+        System.out.println(n1);
 
-        
+
+        // float to int
+        int c= (int)sc.nextFloat();
+        System.out.println(c);
+
+
+        //char to int
+        int d=(int)sc.next().charAt(2);
+        System.out.println(d);
+
+
+        //type promotion concept
+        int num=2;
+        char cha='a';
+
+        System.out.println(cha-num);
+        System.out.println(cha+num);
+
+        int product=cha*num;
+        System.out.println(product);
+
+
+        double p=2.4;
+        long   q=20943;
+        double r=23.4f;
+        double s=p+q+r;     //here value of a,b and c get converted to double value
+
+        System.out.println(s);
+
     }
-    
 }
+

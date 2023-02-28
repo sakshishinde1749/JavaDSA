@@ -1,3 +1,4 @@
+//Boilerplate code
 public class JavaBasics{
     public static void main(String args[]){
         System.out.println("Here we go:)"); //println gives line space
@@ -17,6 +18,6 @@ public class JavaBasics{
         a=b;       //we can assign var b value to var a
         System.out.print(a);
     }   
-} //boilerplate code
+} 
 
 

@@ -28,24 +28,8 @@ public class datatype{
                     System.out.println(n);
 
                 }
-            }
-
-
-
-
-//sum of a and b
-// public class datatype{
-//     public static void main(String args[]){
-//         int a=10;
-//         int b=4;
-
-//         int sum=a+b;
-
-//         System.out.print(sum);
-
-
-//     }
-//     }
+            }     
+    
 
 
 /*In case of multilines we use this type of comment syntax */
