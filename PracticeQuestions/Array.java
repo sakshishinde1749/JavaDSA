@@ -1,4 +1,4 @@
-public class ARRAY{
+public class Array{
     public static void distinctOrNot(int numbers[]){
         int i = 1;
 
