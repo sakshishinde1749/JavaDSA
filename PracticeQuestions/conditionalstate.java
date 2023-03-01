@@ -2,7 +2,7 @@
 
 // IF ELSE METHOD:
 import java.util.Scanner;
-    public class practiceq{
+    public class conditionalstate{
 
         public static void main(String args[]){
         Scanner sc = new Scanner(System.in);

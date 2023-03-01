@@ -6,19 +6,21 @@ public class Array{
 
             for(int j=i+1; j<numbers.length; j++){
 
-                if(i == numbers[j]){
+                if(numbers[i] == numbers[j]){
                     System.out.print("True");
                     break;
                 }
             }
-        }if(i==numbers.length){
+        }if(i==numbers.length+1){
             System.out.print("False");
         }
     }
     public static void main(String args[]){
 
-        int numbers[] = {1,3,5,2,4,1};
+        int numbers[] = {1,2,3,4};
 
-        distinctOrNot(numbers[]);
+        distinctOrNot(numbers);
+
+
     }
 }
