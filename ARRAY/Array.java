@@ -15,10 +15,11 @@ public class Array {
     //call by reference
     public static void update(int grades[]){
 
-    for(int i=0; i<=grades.length; i++){
-        grades[i] = grades[i] + 1;
+       for(int i=0; i<=grades.length; i++){
+           grades[i] = grades[i] + 1;
+        }
     }
-}
+  
     
 
    //linear search
@@ -93,33 +94,33 @@ public class Array {
 
         
 
-        public static void main(String args[]){
-            Scanner sc = new Scanner(System.in);
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
             
-            //Array basics
-            int marks[] = new int[100];
+        //Array basics
+        int marks[] = new int[100];
     
-            marks[0] = sc.nextInt();   //taking input in arrays(in 0th index)
-            marks[1] = sc.nextInt();
-            marks[2] = sc.nextInt();
-            marks[3] = sc.nextInt();
+        marks[0] = sc.nextInt();   //taking input in arrays(in 0th index)
+        marks[1] = sc.nextInt();
+        marks[2] = sc.nextInt();
+        marks[3] = sc.nextInt();
     
-            System.out.println("phy : "+marks[0]);     // output in arrays
-            System.out.println("chem : "+marks[1]);
-            System.out.println("maths : "+marks[2]);
-            System.out.println("english : "+marks[3]);
+        System.out.println("phy : "+marks[0]);     // output in arrays
+        System.out.println("chem : "+marks[1]);
+        System.out.println("maths : "+marks[2]);
+        System.out.println("english : "+marks[3]);
     
-            marks[0] = 100;    //we can update the value which we stored before
-            System.out.println(marks[0]);
+        marks[0] = 100;    //we can update the value which we stored before
+        System.out.println(marks[0]);
     
-            int percentage = (marks[0]+marks[1]+marks[2]+marks[4])/4;
-            System.out.println("percentage"+percentage+"%");
+        int percentage = (marks[0]+marks[1]+marks[2]+marks[4])/4;
+        System.out.println("percentage"+percentage+"%");
     
     
-            //call by reference
-            int grades[] = {97,98,99,98};
+        //call by reference
+        int grades[] = {97,98,99,98};
     
-            update(grades);
+        update(grades);
     
             for(int i=0; i<=grades.length; i++){
                 System.out.println(grades[i]);
@@ -127,12 +128,12 @@ public class Array {
             }
 
 
-            //linearsearch
-            int num[] = {12,10,16,23};
+        //linearsearch
+        int num[] = {12,10,16,23};
     
-            int key = 16;
+        int key = 16;
     
-            int result = linearSearch(num, key);
+        int result = linearSearch(num, key);
     
             if(result==-1){
                 System.out.print("NOT FOUND");
@@ -143,25 +144,25 @@ public class Array {
 
 
 
-            //Largest in array
+        //Largest in array
             
-            int Num[] = {45,34,54,65,90};
+        int Num[] = {45,34,54,65,90};
 
-            int LargestNum = Largest(Num);
-            System.out.println("The largest number is "+LargestNum);
+        int LargestNum = Largest(Num);
+        System.out.println("The largest number is "+LargestNum);
 
             
-            //Smallest in array
-            int Numbers[] = {1,3,5,2,4};
+        //Smallest in array
+        int Numbers[] = {1,3,5,2,4};
 
-            System.out.print("The minimum value is "+Smallest(Numbers));
+        System.out.print("The minimum value is "+Smallest(Numbers));
 
 
-            //binary search in array
-            int Number[] = {1,2,3,4,5};
-            int keyyy = 2;
+        //binary search in array
+        int Number[] = {1,2,3,4,5};
+        int keyyy = 2;
 
-            int resulttt = BinarySearch(Number, keyyy);
+        int resulttt = BinarySearch(Number, keyyy);
 
             if(resulttt == -1){
             System.out.println("SORRY NOT FOUND");

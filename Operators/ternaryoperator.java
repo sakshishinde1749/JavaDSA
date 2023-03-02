@@ -17,7 +17,7 @@ public class ternaryoperator{
 
 
 
-//student will pass or fail
+        //student will pass or fail
             int marks = 98;
 
             String passOrfail = (marks>33)? "pass":"fail";
