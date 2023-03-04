@@ -5,14 +5,15 @@ public class functions_methods {
     //functions with parameters
     public static void calculatesum(){
         
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("enter a number");
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            int sum = a+b;
 
-        System.out.println("enter a number");
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int sum = a+b;
+            System.out.println("the sum of these numbers is "+ sum);
+        }
 
-        System.out.println("the sum of these numbers is "+ sum);
         return;
     }
 
@@ -161,7 +162,7 @@ public static String prime_notprime(int n){
         int Decimal = 0;
         int LastDigit = n%10;
 
-        for(int i=1; n>0; i++){
+        for(; n>0;){
             
             Decimal += (LastDigit * (int)Math.pow(2,pow));
 

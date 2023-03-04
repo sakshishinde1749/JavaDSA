@@ -20,6 +20,7 @@ public class Arrayy {
 
     //Pairs in an array
     public static void Pairs(int Numbers[]){
+        System.out.println("_____********____");
         int totalPairs = 0;
 
         for(int i=0; i<Numbers.length; i++){
@@ -39,28 +40,30 @@ public class Arrayy {
 
     //print Subarrays 
     public static void Subarrays(int Numbers[]){
-        int count = 0;
+        
+        for(int i=0; i<=Numbers.length-1; i++){
 
-        for(int i=0; i<Numbers.length; i++){
-
-            for(int j=i; j<Numbers.length; j++){
+            for(int j=i; j<=Numbers.length-1; j++){
+                System.out.print("(");
 
                 for(int k=i; k<=j; k++){
-                    System.out.print(Numbers[k]+" ");
+                    
+                    if(k==j){
+                        System.out.print(Numbers[k]);
+                    }
+                    else{
+                        System.out.print(Numbers[k]+",");
+                    }
                 }
-                count++;
-
-                System.out.println();
+                System.out.print(")"+" ");
             }
             System.out.println();
         }
-        System.out.println("The number of subarrays are "+count);
     }
 
 
-
-    //addition of subarrays
-    public static int AddSubarrays(int Numbers[]){
+    //addition of all subarrays
+    public static void AddSubarrays_1(int Numbers[]){
         int sum = 0;
 
         for(int i=0; i<Numbers.length; i++){
@@ -74,126 +77,131 @@ public class Arrayy {
                 }
             }
         }
-        return sum;
+        System.out.println(sum);
     }
 
 
 
-    //max num of subarrays
-    public static int MaxSubarrays(int Numbers[]){
-        int MaxNum = Integer.MIN_VALUE;
+    //addition of each subarray(easy method using 2 loops)
+    public static void AddSubarrays_2(int Numbers[]){
+        
+        for(int i=0; i<=Numbers.length-1; i++){
 
-        for(int i=0; i<Numbers.length; i++){
+            int sum = 0;
 
-            for(int j=i; j<Numbers.length; j++){
+            for(int j=i; j<=Numbers.length-1; j++){
 
-                for(int k=i; k<=j; k++){
+                sum += Numbers[j];
+                System.out.print("("+sum+")"+","+" ");
 
-                    if(MaxNum < Numbers[k]){
-                        MaxNum = Numbers[k];
-                    }
 
-                }
             }
+            System.out.println();
         }
-        return MaxNum;
-    }
 
-
-
-    //Min num of aubarryas
-    public static int MinSubarrays(int Numbers[]){
-        int MinNum = Integer.MAX_VALUE;
-
-        for(int i=0; i<Numbers.length; i++){
-
-            for(int j=i; j<Numbers.length; j++){
-
-                for(int k=i; k<=j; k++){
-
-                    if(MinNum>Numbers[k]){
-                        MinNum = Numbers[k];
-                    }
-                }
-            }
-        }
-        return MinNum;
     }
 
     
 
     //max subarray sum(brute force method)
-    public static int MaxSubarraySum_bruteForce(int Numbers[]){
-        int sum = 0;
-        int MaxVal = Integer.MIN_VALUE;
+    public static void MaxSubarraySum_bruteForce(int Numbers[]){
+        int maxSum = Integer.MIN_VALUE;
+        
+        for(int i=0; i<=Numbers.length-1; i++){
 
-        for(int i=0; i<Numbers.length; i++){
+            for(int j=i; j<=Numbers.length-1; j++){
+                int sum = 0;
 
-            for(int j=i; j<Numbers.length; j++){
-                 sum = 0;
                 for(int k=i; k<=j; k++){
-
                     sum += Numbers[k];
-
                 }
-                if(sum > MaxVal){
-                    MaxVal = sum;
+                if(sum>maxSum){
+                    maxSum=sum;
                 }
             }
+
         }
-        return MaxVal;
+        System.out.println(maxSum);
     }
 
     
 
-    //max subarray sum (prefix sum method)
-    public static void MaxSubarraySum_prefixMethod(int Numbers[]){
+    //max subarray sum (prefix sum method1)
+    public static void MaxSubarraySum_prefixMethod1(int Numbers[]){
+        int maxSum = Integer.MIN_VALUE;
+        
+        for(int i=0; i<=Numbers.length-1; i++){
             int sum = 0;
-            int MaxVal = Integer.MIN_VALUE;
 
-            for(int i=0; i<Numbers.length; i++){
-                sum = 0;
+            for(int j=i; j<=Numbers.length-1; j++){
 
-                for(int j=i; j<Numbers.length; j++){
-                    sum+= Numbers[j];
-
-                    if(sum>MaxVal){
-                        MaxVal = sum;
-                    }
+                sum += Numbers[j];
+                if(sum>maxSum){
+                    maxSum = sum;
                 }
             }
-            System.out.println(MaxVal);
+        }
+        System.out.println(maxSum);
+
         }
     
 
 
-    //max subarray sum (kadane's algorithm)
-    public static void MaxSubarraySum_kadaneAlgorithm(int Numbers[]){
+    //max subarray sum (prefix method2)
+    public static void MaxSubarraySum_prefixMethod2(int Numbers[]){
+        int maxSum = Integer.MIN_VALUE;
+        
         int prefix[] = new int[Numbers.length];
         int temp = 0;
-        for(int i=0; i<Numbers.length; i++){
-            temp+= Numbers[i];
+        int i; int sum=0;
+
+        for(i=0; i<=Numbers.length-1; i++){
+            temp += Numbers[i];
             prefix[i] = temp;
         }
 
-
-        int maxSum = Integer.MIN_VALUE;
-        for(int i=0; i<Numbers.length; i++){
+        for(i=0; i<=Numbers.length-1; i++){
             int start = i;
-            for(int j=i; j<Numbers.length; j++){
+
+            for(int j=i; j<=Numbers.length-1; j++){
                 int end = j;
-                int sum;
-                if(start == 0){
+
+                if(start==0){
                     sum = prefix[end];
-                }else{
-                    sum = prefix[end] - prefix[start -1];
                 }
-                
-                maxSum = Math.max(maxSum, sum);
+                else{
+                    sum = prefix[end] - prefix[start-1];
+                }
 
             }
+            maxSum = Math.max(maxSum, sum);
         }
-        System.out.println(maxSum);
+            
+    }
+
+
+    //max subarray sum (kadane's rule)
+    public static void MaxSubarraySum_kadanes(int Numbers[]){
+        int maxSum = Integer.MIN_VALUE;
+        int sum = 0; int max = Integer.MIN_VALUE;
+        
+        for(int i=0; i<=Numbers.length-1; i++){
+            max = Math.max(max,Numbers[i]);
+
+            sum += Numbers[i];
+            if(sum<0){
+                sum = 0;
+            }
+            maxSum = Math.max(maxSum, sum);
+        }
+        if(max<0){
+            System.out.println(max);
+        }
+
+        else{
+            System.out.println(maxSum);
+        }
+        
     }
 
 
@@ -282,25 +290,23 @@ public class Arrayy {
     //sells and stock market
     //1st method
     public static void stockMarket_1(int prices[]){
-
-        int minBuyPrice = Integer.MAX_VALUE;
+        int maxSell = Integer.MIN_VALUE;
         int maxProfit = Integer.MIN_VALUE;
+       
+        for(int i=0; i<=prices.length-2; i++){
 
-        for(int i=1; i<prices.length; i++){
-
-            for(int j=0; j<=i-1; j++){
-
-                if(minBuyPrice>prices[i]){
-                    minBuyPrice = prices[i];
-                }
+            for(int j=i+1; j<=prices.length-1; j++){
+                maxSell = Math.max(maxSell, prices[j]);
             }
-            prices[i] = prices[i] - minBuyPrice;
 
-                if(maxProfit<prices[i]){
-                    maxProfit = prices[i];
-                }
+            int profit = maxSell - prices[i];
+
+            maxProfit = Math.max(maxProfit,profit) ;
+
+
         }
-        System.out.println("The maximum profit will be "+ maxProfit);
+        System.out.println(maxProfit);
+        
     }
 
 
@@ -333,26 +339,26 @@ public class Arrayy {
             int Numbers[] = {1,2,3,4,5};
             int prices[] = {23,43,43,98,67};
     
-            Reverse(Numbers);
+            // Reverse(Numbers);
     
-            for(int i=0; i<=Numbers.length-1; i++){
-                System.out.print(Numbers[i]+" ");
-            }
+            // for(int i=0; i<=Numbers.length-1; i++){
+            //     System.out.print(Numbers[i]+" ");
+            // }
         
 
 
-            Pairs(Numbers);
-            Subarrays(Numbers);
-            AddSubarrays(Numbers);
-            MaxSubarrays(Numbers);
-            MinSubarrays(Numbers);
-            MaxSubarraySum_bruteForce(Numbers);
-            MaxSubarraySum_prefixMethod(Numbers);
-            MaxSubarraySum_kadaneAlgorithm(Numbers);
-            TrapingWater(Numbers);
-            TrapingWater_volume(Numbers);
+            // Pairs(Numbers);
+            // Subarrays(Numbers);
+            //AddSubarrays_1(Numbers);
+            // AddSubarrays_2(Numbers);
+            //MaxSubarraySum_bruteForce(Numbers);
+            // MaxSubarraySum_prefixMethod1(Numbers);
+             //MaxSubarraySum_prefixMethod2(Numbers);
+            //  MaxSubarraySum_kadanes(Numbers);
+            // TrapingWater(Numbers);
+            // TrapingWater_volume(Numbers);
             stockMarket_1(prices);
-            stockMarket_2(prices);
+            // stockMarket_2(prices);
 
 
 

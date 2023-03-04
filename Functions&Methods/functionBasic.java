@@ -8,7 +8,8 @@
 import java.util.Scanner;
 public class functionBasic {
             public static String PrimeOrNot(int n){
-                Scanner sc = new Scanner(System.in);
+                try (Scanner sc = new Scanner(System.in)) {
+                }
 
                 int i;
                 String ans = "";
@@ -26,13 +27,13 @@ public class functionBasic {
         
             }
             public static void main(String args[]){
-                Scanner sc = new Scanner(System.in);
-        
-                System.out.println("enter a number");
-                int n = sc.nextInt();
-        
-                String IsPrimeNotprime = PrimeOrNot(n);
-                System.out.println(IsPrimeNotprime);
+                try (Scanner sc = new Scanner(System.in)) {
+                    System.out.println("enter a number");
+                    int n = sc.nextInt();
+      
+                    String IsPrimeNotprime = PrimeOrNot(n);
+                    System.out.println(IsPrimeNotprime);
+                }
         
         
         

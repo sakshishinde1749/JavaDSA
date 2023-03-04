@@ -95,28 +95,27 @@ public class Array {
         
 
     public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            //Array basics
+            int marks[] = new int[100];
+   
+            marks[0] = sc.nextInt();   //taking input in arrays(in 0th index)
+            marks[1] = sc.nextInt();
+            marks[2] = sc.nextInt();
+            marks[3] = sc.nextInt();
+   
+            System.out.println("phy : "+marks[0]);     // output in arrays
+            System.out.println("chem : "+marks[1]);
+            System.out.println("maths : "+marks[2]);
+            System.out.println("english : "+marks[3]);
+   
+            marks[0] = 100;    //we can update the value which we stored before
+            System.out.println(marks[0]);
+   
+            int percentage = (marks[0]+marks[1]+marks[2]+marks[4])/4;
+            System.out.println("percentage"+percentage+"%");
+        }
             
-        //Array basics
-        int marks[] = new int[100];
-    
-        marks[0] = sc.nextInt();   //taking input in arrays(in 0th index)
-        marks[1] = sc.nextInt();
-        marks[2] = sc.nextInt();
-        marks[3] = sc.nextInt();
-    
-        System.out.println("phy : "+marks[0]);     // output in arrays
-        System.out.println("chem : "+marks[1]);
-        System.out.println("maths : "+marks[2]);
-        System.out.println("english : "+marks[3]);
-    
-        marks[0] = 100;    //we can update the value which we stored before
-        System.out.println(marks[0]);
-    
-        int percentage = (marks[0]+marks[1]+marks[2]+marks[4])/4;
-        System.out.println("percentage"+percentage+"%");
-    
-    
         //call by reference
         int grades[] = {97,98,99,98};
     
