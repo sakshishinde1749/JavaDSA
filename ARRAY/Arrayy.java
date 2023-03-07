@@ -20,7 +20,6 @@ public class Arrayy {
 
     //Pairs in an array
     public static void Pairs(int Numbers[]){
-        System.out.println("_____********____");
         int totalPairs = 0;
 
         for(int i=0; i<Numbers.length; i++){
@@ -313,7 +312,6 @@ public class Arrayy {
 
     //2nd method
     public static void stockMarket_2(int prices[]){
-
         int buyPrice = Integer.MAX_VALUE;
         int maxProfit = 0;
 
@@ -321,15 +319,14 @@ public class Arrayy {
 
             if(buyPrice<prices[i]){
                 int profit = prices[i] - buyPrice;
+                maxProfit = Math.max(maxProfit,profit);
 
-                maxProfit = Math.max(maxProfit, profit);
             }
             else{
                 buyPrice = prices[i];
             }
         }
-        System.out.println("The maximum profit will be "+maxProfit);
-
+        System.out.println(maxProfit);
     }
     
 
@@ -357,11 +354,8 @@ public class Arrayy {
             //  MaxSubarraySum_kadanes(Numbers);
             // TrapingWater(Numbers);
             // TrapingWater_volume(Numbers);
-            stockMarket_1(prices);
-            // stockMarket_2(prices);
-
-
-
+            //stockMarket_1(prices);
+             stockMarket_2(prices);
         
     }
 }
