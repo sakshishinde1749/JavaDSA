@@ -5,6 +5,8 @@ package SortingAlgorithm;
 //sorting is arranging data into meaningful order/sequence
 // for example arranging array into ascending or descending order
 
+import java.util.Arrays;
+import java.util.Collections;
 public class basicSorting{
 
     //bubble Sorting
@@ -91,18 +93,29 @@ public class basicSorting{
 
         }
     }
+
+
+
+    //inbuilt Sorting
+
     
 
     public static void main(String args[]){
 
         int numbers[] = {5,8,1,3,2};
+        Integer Numbers[] = {3,8,9,4,1};
 
         //bubbleSort(numbers);
         //selectionSort(numbers);
-        insertionSort_1(numbers);
+        //insertionSort_1(numbers);
+        //Arrays.sort(numbers);
+        //Arrays.sort(numbers,0,3);  //ending index is non inclusive
+                                     //it will sort numbers till index 2
+        //Arrays.sort(Numbers,Collections.reverseOrder());
+        Arrays.sort(Numbers,0,3,Collections.reverseOrder());
 
-        for(int i=0; i<numbers.length; i++){
-            System.out.print(numbers[i] +" ");
+        for(int i=0; i<Numbers.length; i++){
+            System.out.print(Numbers[i] +" ");
         }
         System.out.println();
 
