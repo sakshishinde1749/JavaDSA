@@ -1,6 +1,5 @@
 package SortingAlgorithm;
 
-
 // What is sorting?
 //sorting is arranging data into meaningful order/sequence
 // for example arranging array into ascending or descending order
