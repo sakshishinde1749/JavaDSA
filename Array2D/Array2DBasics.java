@@ -1,6 +1,9 @@
+package Array2D;
+
 import java.util.Scanner;
 
-public class Array2D_basics{
+
+public class Array2DBasics{
 
     //finding key
     public static boolean search(int matrix[][],int key){

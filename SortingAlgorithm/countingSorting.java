@@ -1,7 +1,6 @@
-package SortingAlgorithm;
-//this method is used for array in which all numbers are positive and range of array is minimum
-
 public class countingSorting{
+
+    //this method is used for array in which all numbers are positive and range of array is minimum
 
     public static void countingSort(int numbers[]){
         int max = Integer.MIN_VALUE;

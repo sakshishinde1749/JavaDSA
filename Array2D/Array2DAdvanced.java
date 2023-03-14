@@ -1,6 +1,8 @@
 package Array2D;
 
-public class Array2D_advanced {
+import javax.lang.model.util.ElementScanner14;
+
+public class Array2DAdvanced {
 
     //spiral matrix
     //my method
@@ -92,37 +94,91 @@ public class Array2D_advanced {
     //primary and secondary sum of diagonal
     public static void diagonalSum(int matrix[][]){
 
+        int primarySum = 0;
+        int secondarySum = 0;
         int startRow = 0;
         int startCol = 0;
         int endRow = matrix.length-1;
         int endCol = matrix[0].length-1;
-        int primarySum = 0;
-        int secondarySum = 0;
-        
-        for(int i=startCol; i<=endCol; i++){
-            primarySum += matrix[startRow][startCol];
-            startRow++; startCol++;
+
+        for(int i=startRow; i<=endRow; i++){
+            primarySum += matrix[i][startCol];
+            startCol++;
         }
         System.out.println(primarySum);
 
-        if((endCol+1)%2==0){
-            for(int j=startCol; j<=endCol; j++){
-                secondarySum += matrix[startRow][endCol];
-                startRow++; endCol--;
-            }
+        for(int i=startRow; i<=endRow; i++){
+            secondarySum += matrix[i][endCol];
+            endCol--;
         }
-        else{
-            for(int j=startCol; j<=endCol; j++){
-                secondarySum += matrix[startRow][endCol];
-                startRow++; endCol--;
-            }
-            secondarySum = secondarySum - matrix[endRow/2][endCol/2];
+        endCol = matrix[0].length-1;
+
+        if(matrix.length%2 != 0){
+            secondarySum = secondarySum - matrix[(endRow)/2][(endCol)/2];
         }
         System.out.println(secondarySum);
 
-        int diagonalsum = primarySum + secondarySum;
-        System.out.println(diagonalsum);
+        int totalDiagonalSum = primarySum + secondarySum;
+        System.out.println(totalDiagonalSum);
 
+    }
+
+
+
+    //key search 
+    //brute force method
+    public static int[] keySearch_bruteForce(int matrix[][],int key){
+        
+        int ans[] = new int[2];
+        ans[0] = -1; ans[1]=-1;
+
+        for(int i=0; i<=matrix.length-1; i++){
+            for(int j=0; j<=matrix[0].length-1; j++){
+                if(key == matrix[i][j]){
+                    ans[0] = i;
+                    ans[1] = j;
+                }
+            }
+        }
+        return ans;
+    }
+
+
+
+    //row wise binary method
+    public static void keySearch_binary(int matrix[][], int key){
+
+        boolean test = false;
+
+        for(int i=0; i<matrix.length; i++){
+            int start = 0;
+            int end = matrix[i].length - 1;
+
+
+            while(start<=end){
+                int mid = (start + end)/2;
+
+                if(key > matrix[i][mid]){
+                    start = mid + 1;
+                }
+                else if(key < matrix[i][mid]){
+                    end = mid - 1;
+                }
+                else{
+                    System.out.println(i + "," + mid);
+                    test = true;
+                    break;
+                }
+            }
+
+            if(test){
+                break;
+            }
+        }
+
+        if(!test){
+            System.out.println("key not found");
+        }
     }
 
 
@@ -131,13 +187,22 @@ public class Array2D_advanced {
     public static void main(String args[]){
 
         int matrix[][] =  {{1,2,3,4,5},
-                           {16,17,18,19,6},
-                           {15,24,25,20,7},
-                           {14,23,22,21,8},
-                           {13,12,11,10,9}};
+                           {16,17,18,19,20},
+                           {21,24,25,26,27},
+                           {28,29,30,31,32},
+                           {33,33,34,36,38}};
+        int key = 38;
 
         //spiralMatrix_1(matrix);
         //spiralMatrix_2(matrix);
-        diagonalSum(matrix);
+        //diagonalSum(matrix);
+        //int sol[] = keySearch_bruteForce(matrix, key);
+        //if(sol[0] != -1){
+        //     System.out.println(sol[0] + "," + sol[1]);
+        // }else{
+        //     System.out.println("key not found");
+        // }
+
+        keySearch_binary(matrix, key);
     }
 }
