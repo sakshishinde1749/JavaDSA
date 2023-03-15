@@ -1,7 +1,5 @@
 package Array2D;
 
-import javax.lang.model.util.ElementScanner14;
-
 public class Array2DAdvanced {
 
     //spiral matrix
@@ -125,7 +123,7 @@ public class Array2DAdvanced {
 
 
 
-    //key search 
+    //key search in sorted array
     //brute force method
     public static int[] keySearch_bruteForce(int matrix[][],int key){
         
@@ -145,7 +143,7 @@ public class Array2DAdvanced {
 
 
 
-    //row wise binary method
+    //row wise binary method 
     public static void keySearch_binary(int matrix[][], int key){
 
         boolean test = false;
@@ -183,6 +181,34 @@ public class Array2DAdvanced {
 
 
 
+    //staircase search
+    public static void keySearch_staircase(int matrix[][], int key){
+        int rowIndx = 0;
+        int colIndx = matrix[0].length-1;
+        boolean test = false;
+
+        while(rowIndx<matrix.length && colIndx>=0){
+
+            if(matrix[rowIndx][colIndx] == key){
+                System.out.println(rowIndx+","+colIndx);
+                test = true;
+                break;
+            }
+            else if(matrix[rowIndx][colIndx] > key){
+                colIndx--;
+            }
+            else {
+                rowIndx++;
+            }
+        }
+        if(!test){
+            System.out.println("key not found");
+        }
+       
+    }
+
+
+
 
     public static void main(String args[]){
 
@@ -203,6 +229,8 @@ public class Array2DAdvanced {
         //     System.out.println("key not found");
         // }
 
-        keySearch_binary(matrix, key);
+        //keySearch_binary(matrix, key);
+
+        keySearch_staircase(matrix, key);
     }
 }
