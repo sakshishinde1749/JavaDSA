@@ -1,3 +1,4 @@
+package SortingAlgorithm;
 public class countingSorting{
 
     //this method is used for array in which all numbers are positive and range of array is minimum

@@ -1,0 +1,9 @@
+str1.compareToIgnorecase(str2)    str1.compareTo(str2)
+    if it is >0 then str1>str2    this function consider 'A' and 'a' different but other function not
+             <0 then str1<str2
+             =0 then str1=str2
+
+
+ sb.append(ch);         //this function adds ch value accordingly without creating new string
+                        //its time complexity is n ; it reduces from n^2 to n
+                
