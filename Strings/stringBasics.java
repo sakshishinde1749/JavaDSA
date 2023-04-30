@@ -22,6 +22,7 @@ public class stringBasics {
         String name = sc.next();     //takes single word as input
         System.out.print(name+" ");
 
+        System.out.println();
         sc.nextLine();
         String sentance = sc.nextLine();
         System.out.println(sentance);   //takes multiple word as input

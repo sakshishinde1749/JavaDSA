@@ -73,7 +73,7 @@ public class stringPart2 {
         String word = "sakshi";
         String path = "WNEENESENNN";
         int si = 0;
-        int ei = 5;
+        int ei = 4;
 
         //palindromeOrNot(word);
 

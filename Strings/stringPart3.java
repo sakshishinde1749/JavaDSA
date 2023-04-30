@@ -46,9 +46,32 @@ public class stringPart3 {
     }
 
 
-
+    //string compression
     public static void stringCompression(String newString){
+        StringBuilder sb = new StringBuilder("");
         
+        int count = 1;
+
+        for(int i=0; i<newString.length(); i++){
+
+            if(i!=newString.length()-1){
+                if(newString.charAt(i) == newString.charAt(i+1)){
+                    count++;
+                }
+            }
+            else{
+                if(count>1){
+                    sb.append(newString.charAt(i));
+                    sb.append(count);
+                }
+                else{
+                    sb.append(newString.charAt(i));
+                }
+                count = 1;
+               
+            }
+        }
+        System.out.println(sb);
     }
 
 
@@ -56,18 +79,18 @@ public class stringPart3 {
     public static void main(String args[]){
         String fruits[] = {"mango", "apple", "banana","watermelon"};
         String str = "hello there";
-        String newStr = "aaabbbccdddd";
+        String newStr = "aabb";
 
        // largest(fruits);
-        wordToUppercase(str);
-
+        //wordToUppercase(str);
+        stringCompression(newStr);
 
         //string builders
-        StringBuilder sb = new StringBuilder(" ");
-        for(char ch='a'; ch<='z'; ch++){
-            sb.append(ch);         //this function adds ch value accordingly without creating new string
-        }                          //its time complexity is n ; it reduces from n^2 to n
-        System.out.println(sb);
+        // StringBuilder sb = new StringBuilder(" ");
+        // for(char ch='a'; ch<='z'; ch++){
+        //     sb.append(ch);         //this function adds ch value accordingly without creating new string
+        // }                          //its time complexity is n ; it reduces from n^2 to n
+        // System.out.println(sb);
     
 
 
