@@ -27,7 +27,8 @@ public class stringPart3 {
     //word to uppercase
     public static void wordToUppercase(String str){
 
-        StringBuilder sb = new StringBuilder(" ");
+        StringBuilder sb = new StringBuilder(" ");      //stringbuilder is a type of datastructure like string but in this we can do changes unlike string we dont need to make a new string
+                                                        //stringbuilder dont have string type but to convert it into string we use sb.toString()
 
         sb.append(Character.toUpperCase(str.charAt(0)));
 

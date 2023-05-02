@@ -110,6 +110,8 @@ public class stringPart2 {
         else{
             System.out.println("strings are not equal");
         }
+
+        //string variables are stored into stack and its values are stored into heap memory
     }
     
 }

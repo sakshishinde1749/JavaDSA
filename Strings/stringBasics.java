@@ -15,7 +15,7 @@ public class stringBasics {
         String str = "sakshi";
         String strr = new String("abc");    //second String syntax
 
-        //Strings are immuatable that means value of string never changes
+        //Strings are immuatable that means value of string never changes and if we wanted to make any change in string then we need to create new string or we can use stringbuilder
 
         //input output 
         Scanner sc = new Scanner(System.in);
