@@ -3,6 +3,7 @@ package OOPS;
 // Objects : entities in the real world
 // classes : group of these entities
 // there are two memories in java one is stack another is heap in which object gets stored
+// class has two things which is attributes(properties) and function(behavior)
 
 public class BasicOops {
 
@@ -27,13 +28,13 @@ public class BasicOops {
 
 class Pen{
 
-    String color;
-    int tip;
+   String color;
+   int tip;
 
-    void setColor(String newColor){
-        color = newColor;
+    String setColor(String newColor){
+      color = newColor;
     }
-    void setTip(int newTip){
+    int setTip(int newTip){
         tip = newTip;
     }
 }
