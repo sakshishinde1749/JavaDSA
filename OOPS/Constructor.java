@@ -7,7 +7,8 @@ package OOPS;
 //memory allocation happens when it is called
 
 
-//Destructor : 
+//Destructor : It used to destruct object, In java we dont have to make any destructor 
+//java has garbage collect which remove unwanted unused code from memory
 
 
 public class Constructor {
