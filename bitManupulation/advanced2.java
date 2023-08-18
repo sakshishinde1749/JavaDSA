@@ -44,11 +44,20 @@ public class advanced2 {
 
 
     //fast exponential
-    public static void fastExpo(int a, int m){
-        while(n>0){
-            if((n & 1) == 1)
-        }
+    // public static void fastExpo(int a, int m){
+    //     while(n>0){
+    //         if((n & 1) == 1)
+    //     }
 
+    // }
+    public static void fastExpo(int a, int m){
+        while(m > 0){
+            if((m & 1) == 1) {
+                // Perform some operation related to fast exponentiation
+                // You need to add the actual code here
+            }
+            m >>= 1;
+        }
     }
 
     public static void main(String args[]){
