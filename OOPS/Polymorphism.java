@@ -10,6 +10,8 @@ package OOPS;
 // method overloading: same functions with different parameters
 // method overriding: parent and child both classes contains same function with different defination
 
+// packages in java : It is group of similar types of classes, interfaces and sub-packages. eg scanner package
+
 public class Polymorphism {
     
     public static void main(String args[]){
