@@ -1,4 +1,4 @@
-// data types: primitive(already exist)       non-primitive(we need to make)      1byte=8bit
+// data types: primitive(already exist)       non-primitive(we need to make)      1byte=8bit 
               // 1.byte   (1byte)                        1.String
               // 2.short  (2bytes)                       2.Array
               // 3.char   (2bytes)                       3.Class
@@ -12,19 +12,19 @@
 
 public class datatype{
     public static void main(String args[]){
-        byte a=8;
+        byte a= -128;       //byte can store numbers between -128 to 127
         System.out.println(a);
 
-        char ch='b';   //write char in single inverted comma and we cant write 2 char at a same time together like'ac'
+        char ch='b';        //write char in single inverted comma and we cant write 2 char at a same time together like'ac'
         System.out.println(ch);
 
-        boolean x=true;  //boolean stores either true or false
+        boolean x=true;     //boolean stores either true or false
         System.out.println(x);
 
         int b=5;
         System.out.println(b);
 
-        short n=120;     //similar to int and flaot contains decimal no.
+        short n=120;        //similar to int and flaot contains decimal no.
         System.out.println(n);
 
     }
