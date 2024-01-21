@@ -18,13 +18,10 @@ public class ternaryoperator{
 
 
         //student will pass or fail
-            int marks = 98;
+        int marks = 98;
 
-            String passOrfail = (marks>33)? "pass":"fail";
-            System.out.println(passOrfail);
-        
-
-
+        String finalresult = (marks > 33)? "Pass" : "fail" ;
+        System.out.println(finalresult);
         
     }
 }

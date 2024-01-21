@@ -10,33 +10,30 @@ package ConditionalStatement;
 */
 
 import java.util.Scanner;
+
 public class switchstatement{
     public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("enter number");
-        int num = sc.nextInt();
-
-        switch (num){
-            case 1:System.out.println("sakshishinde");
-                    break;
+        try (Scanner sc = new Scanner(System.in)) {
             
-            case 2:System.out.println("sakshipatil");
-                    break;
+            int num = 10;
 
-            case 3:System.out.println("vaishnavi");
-                    break;
+            switch (num){
+                case 1:System.out.println("sakshishinde");
+                        break;
+                
+                case 2:System.out.println("sakshipatil");
+                        break;
 
-            default:System.out.println("BFF:)");
-        }
+                case 3:System.out.println("vaishnavi");
+                        break;
 
-    
-//calculator using switch 
-            System.out.println("enter num1");
-            int num1 = sc.nextInt();
+                default:System.out.println("BFF:)");
+            }
 
-            System.out.println("enter num2");
-            int num2 = sc.nextInt();
+   
+            //calculator using switch 
+            int num1 = 10;
+            int num2 = 12;
 
             System.out.println("enter operator");
             char operator = sc.next().charAt(0);
@@ -61,6 +58,7 @@ public class switchstatement{
             
             }
         }
-
-
     }
+
+
+}
